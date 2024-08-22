@@ -1,13 +1,14 @@
 
 import React, { useState } from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const User = ({ product = {} }) => {
   const [form, setForm] = useState({
     Email: product.Email || '',
     Password: product.Password || '',
   });
-
+  let navigate = useNavigate();
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
@@ -95,6 +96,7 @@ const User = ({ product = {} }) => {
               backgroundColor: '#6b2ca2', 
             }
           }}
+          onClick={() => navigate('/home')}
         >
           Login
         </Button>

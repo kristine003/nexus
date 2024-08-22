@@ -1,0 +1,9 @@
+const mongoose=require('mongoose');
+const userSchema=mongoose.Schema({
+    userName:String,
+    emailId:String,
+    password:String,
+    contNum:String
+})
+const UserData=mongoose.model('nexus',userSchema);
+module.exports=UserData

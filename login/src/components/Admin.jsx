@@ -1,12 +1,16 @@
 
 import React, { useState } from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Admin = ({ product = {} }) => {
   const [form, setForm] = useState({
     Email: product.Email || '',
     Password: product.Password || '',
   });
+  let navigate = useNavigate();
+  // let location = useLocation();
+
 
   const [error, setError] = useState('');
 
@@ -93,6 +97,7 @@ const Admin = ({ product = {} }) => {
               backgroundColor: '#6b2ca2', 
             }
           }}
+          onClick={() => navigate('/groups')}
         >
           Login
         </Button>

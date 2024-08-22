@@ -1,0 +1,164 @@
+.custom-background-color {
+    background-color: #805c5c; 
+}
+.search-bar {
+  position: absolute;
+  top: 100px;
+  left: 205px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .search-input {
+    padding: 13px;
+    width: 950px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-button {
+    padding: 10px;
+    background-color: #6b1ca2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .search-button:hover {
+    background-color: #6b2ca2;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 200px;
+  }
+  
+  .footer svg {
+    width: 40px;
+    height: 40px;
+  }
+
+.create-button{
+    padding: 10px;
+    background-color: #6b1ca2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .body-fade {
+  transition: transform 0.5s ease-in-out;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ad1515;
+
+  }
+  
+  .body-fade-hidden {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+  
+  .body-fade-visible {
+    transform: translateX(0); /* Move to its original position */
+  }
+  
+  
+  
+  .create-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .create-button:hover {
+    background-color: #6b2ca2;
+  }
+
+  .popup {
+    position: fixed;
+    top: 180px;
+    left: 50px;
+    right: 50px;
+    /* width: ;
+    height: ;
+    background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    top: 90px;
+    left: 50px;
+    right: 50px;
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 500px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .popup-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .popup-input:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-input::placeholder {
+    color: #ccc;
+  }
+  
+  .popup-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #6b1ca2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .popup-button:hover {
+    background-color: #6b2ca2;;
+  }
+  
+  .custom-dialog .MuiDialog-paper {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2;
+    border-radius: 2;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
