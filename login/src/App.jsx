@@ -16,7 +16,9 @@ function App() {
 
     <Navbar/>
     <Nexnav/>
-    <Global/>
+    
+    
+    
 
 
 
@@ -28,7 +30,11 @@ function App() {
       <Route path='/groups' element={<Groups/>}></Route>
       <Route path="/profile" element={<Profile/>} ></Route>
       <Route path="/home" element={<Nexhome/>} ></Route>
+      <Route path="/abt" element={<About/>} ></Route>
+      <Route path="/cntct" element={<Contact/>} ></Route>
       <Route path="/studygroups" element={<Studygroups/>} ></Route>
+      <Route path="/useradm" element={<Useradmin/>} ></Route>
+      <Route path="/apprv" element={<Approval/>} ></Route>
     </Routes>
     </>
   )
@@ -42,5 +48,9 @@ import Nexnav from './components3/Nexnav'
 import Nexhome from './components3/Nexhome'
 import Profile from './components3/Profile'
 import Studygroups from './components3/Studygroups'
-import { Global } from '@emotion/react'
+import Useradmin from './components2/Useradmin'
+import Approval from './components2/Approval'
+import About from './components3/About'
+import Contact from './components3/Contact'
+
 export default App

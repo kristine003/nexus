@@ -106,14 +106,15 @@ const Profile = () => {
       <br />
       <div>
         
-      <TableContainer component={Paper} sx={{ backgroundColor: 'transparent'}} >
-      <Table sx={{ minWidth: 950, boxShadow:0, '& .MuiTableCell-root': { color: 'white' } }} aria-label="simple table">
+      <TableContainer component={Paper} sx={{ color: 'white', backgroundColor: 'transparent' }}>
+        <Table sx={{ minWidth: 1200, borderStyle: 'solid', borderWidth: '0.5px', borderColor: 'white' }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Email ID</TableCell>
-            <TableCell align="right">Password&nbsp;</TableCell>
-            <TableCell align="right">Contact Number&nbsp;</TableCell>
+            <TableCell align="center" sx={{color:'white'}}>Name</TableCell>
+            <TableCell align="center" sx={{color:'white'}}>Email ID</TableCell>
+            <TableCell align="center" sx={{color:'white'}}>Password&nbsp;</TableCell>
+            <TableCell align="center" sx={{color:'white'}}>Contact Number&nbsp;</TableCell>
+            <TableCell align="center" sx={{color:'white'}}></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -122,19 +123,20 @@ const Profile = () => {
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" align="center" sx={{color:'white'}}>
                 {row.userName}
               </TableCell>
-              <TableCell align="right">{row.emailId}</TableCell>
-              <TableCell align="right">{row.password}</TableCell>
-              <TableCell align="right">{row.contNum}</TableCell>
-              <TableCell align="right"><Button variant='contained' color='inherit'onClick={()=>{updateUser(row)}} sx={{ backgroundColor: '#6b1ca2', '&:hover': { backgroundColor: '#6b2ca2' } }} >Update</Button></TableCell>
+              <TableCell align="center" sx={{color:'white'}}>{row.emailId}</TableCell>
+              <TableCell align="center" sx={{color:'white'}}>{row.password}</TableCell>
+              <TableCell align="center" sx={{color:'white'}}>{row.contNum}</TableCell>
+              <TableCell><Button variant='contained' color='inherit'onClick={()=>{updateUser(row)}} sx={{ color: 'white' ,backgroundColor: '#6b1ca2', '&:hover': { backgroundColor: '#6b2ca2' } }} >Edit</Button></TableCell>
               {/* <TableCell align="right"><Button variant='contained' color='inherit'onClick={()=>{deleteData(row._id)}}>Delete</Button></TableCell> */}
             </TableRow>
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </TableContainer><br></br>
+
     </div>
 
       <br />
@@ -146,7 +148,7 @@ const Profile = () => {
             <CardMedia
               component="img"
               height="140"
-              // image="white3.jpg"
+              image="white3.jpg"
               alt="Your Groups"
             />
           </CardActionArea>
@@ -159,7 +161,7 @@ const Profile = () => {
             <CardMedia
               component="img"
               height="140"
-              // image="white4.jpg"
+              image="white4.jpg"
               alt="Messages"
             />
           </CardActionArea>
@@ -171,7 +173,7 @@ const Profile = () => {
             <CardMedia
               component="img"
               height="140"
-              // image="white1.png"
+              image="white1.png"
               alt="Materials"
             />
           </CardActionArea>
@@ -183,7 +185,7 @@ const Profile = () => {
             <CardMedia
               component="img"
               height="140"
-              // image="white2.jpeg"
+              image="white2.jpeg"
               alt="FAQS"
             />
           </CardActionArea>

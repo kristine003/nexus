@@ -11,14 +11,13 @@ import Tooltip from '@mui/material/Tooltip';
 import { Avatar } from '@mui/material';
 import './Edit.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-// import { globalProfilePicture } from './globals';
 
 const buttonStyles = {
   fontSize: 14,
   fontFamily: 'serif',
 };
 
-document.body.style.backgroundImage = "url('purple3.png')";
+
 document.body.style.cssText = ` 
   background-image: url('purple3.png'); 
   background-size: cover; 
@@ -34,14 +33,13 @@ const Nexnav = () => {
     navigate('/profile', { state: { from: location.pathname } });
   };
 
-  if (location.pathname === '/home'  || location.pathname === '/studygroups' || location.pathname === '/profile') {
+  if (location.pathname === '/home'  || location.pathname === '/studygroups' || location.pathname === '/profile' || location.pathname === '/abt' || location.pathname === '/cntct') {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="absolute"
           sx={{
-            backgroundColor: 'white',
             color: 'white',
             backgroundColor: 'transparent',
             boxShadow: 'none',
@@ -76,7 +74,7 @@ const Nexnav = () => {
               <Button
                 color="inherit"
                 sx={buttonStyles}
-                onClick={() => navigate('/about')}
+                onClick={() => navigate('/abt')}
               >
                 About
               </Button>
@@ -92,7 +90,7 @@ const Nexnav = () => {
               <Button
                 color="inherit"
                 sx={buttonStyles}
-                onClick={() => navigate('/contact-us')}
+                onClick={() => navigate('/cntct')}
               >
                 Contact us
               </Button>
@@ -102,7 +100,7 @@ const Nexnav = () => {
                 sx={buttonStyles}
                 onClick={() => navigate('/')}
               >
-                Login
+                Logout
               </Button>
               <Box sx={{ margin: '0 45px' }} />
             </Box>
