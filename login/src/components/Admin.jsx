@@ -1,32 +1,24 @@
-
 import React, { useState } from 'react';
 import { Box, Button, TextField, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Admin = ({ product = {} }) => {
-  const [form, setForm] = useState({
-    Email: product.Email || '',
-    Password: product.Password || '',
-  });
-  let navigate = useNavigate();
-  // let location = useLocation();
+const adminCredentials = {
+  email: 'admin@example.com',
+  password: 'password123',
+};
 
-
+const Admin = () => {
+  const [form, setForm] = useState({ Email: '', Password: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); 
-   
-    if (!form.Email || !form.Password) {
-      setError('All fields are required.');
-      return;
+    e.preventDefault();
+    if (form.Email === adminCredentials.email && form.Password === adminCredentials.password) {
+      navigate('/groups');
+    } else {
+      setError('Invalid credentials');
     }
-
-    
-    setError('');
-
-    
-    console.log('Form Submitted:', form);
   };
 
   const handleChange = (e) => {
@@ -38,28 +30,33 @@ const Admin = ({ product = {} }) => {
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '50ch' },
-        backgroundColor: 'transperant', 
+        backgroundColor: 'transparent',
         p: 20.9,
-        height:'42.42ch',
-        borderRadius: '8px', 
+        height: '42.42ch',
+        borderRadius: '8px',
       }}
       noValidate
       autoComplete="off"
       onSubmit={handleSubmit}
     >
       <br />
-      <Typography variant="h6" noWrap component="a" sx={{
-  fontSize: 30,
-  fontFamily: 'serif',
-  position: 'absolute',
-  top: '28%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  color:'white',
-  letterSpacing:'7px'
-}}>
-              ADMIN LOGIN
-            </Typography>
+      <Typography
+        variant="h6"
+        noWrap
+        component="a"
+        sx={{
+          fontSize: 30,
+          fontFamily: 'serif',
+          position: 'absolute',
+          top: '28%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          color: 'white',
+          letterSpacing: '7px',
+        }}
+      >
+        ADMIN LOGIN
+      </Typography>
       <div>
         <TextField
           required
@@ -83,21 +80,17 @@ const Admin = ({ product = {} }) => {
           sx={{ backgroundColor: '#fff' }}
         />
         <br />
-
         {error && (
           <div style={{ color: 'red', marginBottom: '10px' }}>{error}</div>
         )}
-
-<br/><Button
-          type="submit" 
+        <br />
+        <Button
+          type="submit"
           variant="contained"
           sx={{
             backgroundColor: '#6b1ca2',
-            '&:hover': {
-              backgroundColor: '#6b2ca2', 
-            }
+            '&:hover': { backgroundColor: '#6b2ca2' },
           }}
-          onClick={() => navigate('/groups')}
         >
           Login
         </Button>
